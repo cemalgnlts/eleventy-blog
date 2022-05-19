@@ -1,0 +1,57 @@
+.article-header {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.article-header__cover {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+article {
+  padding: 0 1em;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  text-align: justify;
+  font-size: 1.2rem;
+  --text-indent: 0.5em;
+}
+
+p {
+  text-indent: var(--text-indent);
+}
+
+article h1,
+article h2,
+article h3 {
+  margin-top: 1em;
+}
+
+article h1 {
+  margin-bottom: 1em;
+}
+
+article h2 {
+  margin-bottom: 0.5em;
+}
+
+article h3 {
+  margin-bottom: 0.25em;
+}
+
+article code {
+  font-family: monospace;
+  background: #ddd;
+  padding: 0.4em;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+article img {
+  margin-top: 1em;
+  margin-left: calc(var(--text-indent) * -1);
+  cursor: pointer;
+}

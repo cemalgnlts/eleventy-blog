@@ -1,0 +1,89 @@
+.home-header {
+  margin-bottom: 2em;
+}
+
+.latest-grid {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  align-items: flex-start;
+  margin-bottom: -6em;
+}
+
+.latest-grid a {
+  height: 15em;
+  padding: 1em;
+  text-decoration: none;
+  color: var(--bg-color);
+  border-radius: 0.8em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.latest-grid h2 {
+  margin-top: 0.5em;
+}
+
+.latest-grid a:first-child,
+.latest-grid a:last-child {
+  grid-column: span 2;
+  height: 15em !important;
+}
+
+.latest-grid a:nth-child(2n),
+.latest-grid a:nth-child(3n),
+.latest-grid a:nth-child(4n),
+.latest-grid a:nth-child(5n) {
+  height: 25em;
+}
+
+.latest-grid a:nth-child(4n),
+.latest-grid a:nth-child(5n) {
+  margin-top: -10em;
+}
+
+.recomended-posts {
+  margin-bottom: 1.5em;
+}
+
+.recomended-posts ul {
+  margin-top: 1em;
+  list-style-type: none;
+  counter-reset: list-number;
+}
+
+.recomended-posts ul li {
+  background-color: rgba(0, 0, 255, 0.1);
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 0.3em;
+}
+
+.recomended-posts ul li::before {
+  counter-increment: list-number;
+  content: counter(list-number);
+  display: inline-block;
+
+  width: 2em;
+  line-height: 2rem;
+  text-align: center;
+  font-weight: bold;
+  
+  border-radius: 0.3em;
+  margin-right: 1em;
+
+  background: var(--primary);
+  color: var(--bg-color);
+}
+
+.recomended-posts ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.recomended-posts ul li a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,29 @@
+---
+title: Home
+layout: home.njk
+---
+
+<div class="home-header">
+  <h1 class="fz-1">Welcome.</h1>
+  <p>The latest articles for you.</p>
+</div>
+
+<div class="latest-grid">
+  {% for post in collections.posts | head(6) %}
+    <a href="{{post.url | url}}" style="background-image: url({{post.data.cover}})">
+      <small>{{post.data.category | upper}}</small>
+      <h2>{{post.data.title}}</h2>
+    </a>
+  {% endfor %}
+</div>
+
+<div class="recomended-posts">
+  <h1>Recomended Posts</h1>
+  <ul>
+    {%- for post in collections.posts | selectRandom(config.recomendedItemSize) -%}
+      <li>
+        <a href="{{post.url | url}}">{{post.data.title}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

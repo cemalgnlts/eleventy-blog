@@ -1,0 +1,37 @@
+<header>
+  <div class="container">
+    <h3><a href="/">Blog</a></h3>
+    
+    <nav>
+      <button class="menu-toggler" aria-expanded="false" aria-controls="menu" aria-label="toggle menu">
+        <svg width="22" height="16" fill="black">
+          <g class="menu-toggler__icon--menu">
+            <rect width="22" height="2" ></rect>
+            <rect width="22" height="2" y="6"></rect>
+            <rect width="22" height="2" y="12"></rect>
+          </g>
+          <g transform="rotate(90 8.5 7.5)" class="menu-toggler__icon--close">
+            <rect width="20" height="2" x="-3" y="5" transform="rotate(45 9 8)"></rect>
+            <rect width="20" height="2" x="-3" y="4.8" transform="scale(-1 1) rotate(45 0 -14)"></rect>
+          </g>
+        </svg>
+      </button>
+
+      <ul id="menu">
+        {% for item in navbar %}
+          <li{% if utils.isActiveUrl(item.url, page.url) %} class="active" aria-current="page"{% endif %} data-name="{{item.title | lower}}">
+            <a href="{{item.url | url}}">{{item.title}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <div class="profile">
+      <a href="/about">
+        <img src="https://avatars.githubusercontent.com/u/45357531?v=4" alt="about" />
+      </a>
+    </div>
+    
+    <div class="nav-backdrop"></div>
+  </div>
+</header>

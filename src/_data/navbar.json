@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Food",
+        "url": "/category/food/"
+    },
+    {
+        "title": "Architecture",
+        "url": "/category/architecture/"
+    },
+    {
+        "title": "Technology",
+        "url": "/category/technology/"
+    },
+    {
+        "title": "Home",
+        "url": "/"
+    },
+    {
+        "title": "Travel",
+        "url": "/category/travel/"
+    },
+    {
+        "title": "Interior",
+        "url": "/category/interior/"
+    },
+    {
+        "title": "Photography",
+        "url": "/category/photography/"
+    }
+]

@@ -1,0 +1,38 @@
+:root {
+  --bg-color: #fafafa;
+  --text-color: #212121;
+  --primary: #2196f3;
+}
+
+::selection {
+  background-color: bisque;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Roboto, sans-serif;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+main {
+  padding: 1em;
+}
+
+.container {
+  width: min(100%, 1300px);
+  margin: auto;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+svg:focus {
+  outline: solid 1px var(--text-color);
+  outline-offset: 2px;
+}

@@ -1,0 +1,8 @@
+.fz-1 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.disabled {
+  opacity: 0.2;
+}

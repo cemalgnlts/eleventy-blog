@@ -1,0 +1,20 @@
+{% extends "base.njk" %}
+
+{% block main %}
+  <div class="article-header">
+    <div class="article-header__cover" style="background-image: url({{cover}})"></div>
+  </div>
+  <div class="container">
+    <article>
+      <h2>{{ title }}</h2>
+      {{ content | safe }}
+    </article>
+  </div>
+{% endblock %}
+
+{% block script %}
+  const allArticleImages = document.querySelectorAll("article img");
+  allArticleImages.forEach(img => {
+      img.onclick = () => window.open(img.src);
+  });
+{% endblock %}

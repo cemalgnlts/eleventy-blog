@@ -1,0 +1,25 @@
+---
+layout: base.njk
+pagination:
+  data: collections.categories
+  size: 1
+  alias: category
+permalink: "{{category.slug}}"
+eleventyComputed:
+  title: "{{category.title}}"
+---
+<h3>Category: {{category.title}}</h3>
+
+<div class="category-grid">
+  {% for post in category.items %}
+		<a href="{{post.url | url}}" style="background-image: url({{post.data.cover}})">
+			<h3>{{ post.data.title }}</h3>
+		</a>
+  {% endfor %}
+</div>
+
+<div class="pagination-footer">
+  <a href="{{category.prevUrl}}"{%if not category.hasPrev%} class="disabled"{%endif%}>Previous</a>
+  <span>{{category.pageNumber}}/{{category.pageSize}}</span>
+  <a href="{{category.nextUrl}}"{%if not category.hasNext%} class="disabled"{%endif%}>Next</a>
+</div>

@@ -1,0 +1,8 @@
+{
+  "layout": "blog.njk",
+  "tags": "posts",
+  "color": "burlywood",
+  "category": "default",
+  "permalink": "/blog/{{title | slug}}/",
+  "cover": "/img/feature.png"
+}
