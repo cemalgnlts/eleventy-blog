@@ -12,7 +12,7 @@ eleventyComputed:
 
 <div class="category-grid">
   {% for post in category.items %}
-		<a href="{{post.url | url}}" style="background-image: url({{post.data.cover}})">
+		<a href="{{post.url | url}}" style="background-image: url(/eleventy-blog{{post.data.cover}})">
 			<h3>{{ post.data.title }}</h3>
 		</a>
   {% endfor %}

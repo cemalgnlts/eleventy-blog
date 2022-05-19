@@ -10,7 +10,7 @@ layout: home.njk
 
 <div class="latest-grid">
   {% for post in collections.posts | head(6) %}
-    <a href="{{post.url | url}}" style="background-image: url({{post.data.cover}})">
+    <a href="{{post.url | url}}" style="background-image: url({{/eleventy-blogpost.data.cover}})">
       <small>{{post.data.category | upper}}</small>
       <h2>{{post.data.title}}</h2>
     </a>
@@ -22,7 +22,7 @@ layout: home.njk
   <ul>
     {%- for post in collections.posts | selectRandom(config.recomendedItemSize) -%}
       <li>
-        <a href="{{post.url | url}}">{{post.data.title}}</a>
+        <a href="/eleventy-blog{{post.url | url}}">{{post.data.title}}</a>
       </li>
     {% endfor %}
   </ul>

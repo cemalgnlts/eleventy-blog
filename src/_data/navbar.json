@@ -1,30 +1,30 @@
 [
     {
         "title": "Food",
-        "url": "/category/food/"
+        "url": "/eleventy-blog/category/food/"
     },
     {
         "title": "Architecture",
-        "url": "/category/architecture/"
+        "url": "/eleventy-blog/category/architecture/"
     },
     {
         "title": "Technology",
-        "url": "/category/technology/"
+        "url": "/eleventy-blog/category/technology/"
     },
     {
         "title": "Home",
-        "url": "/"
+        "url": "/eleventy-blog/"
     },
     {
         "title": "Travel",
-        "url": "/category/travel/"
+        "url": "/eleventy-blog/category/travel/"
     },
     {
         "title": "Interior",
-        "url": "/category/interior/"
+        "url": "/eleventy-blog/category/interior/"
     },
     {
         "title": "Photography",
-        "url": "/category/photography/"
+        "url": "/eleventy-blog/category/photography/"
     }
 ]
