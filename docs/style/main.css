@@ -22,7 +22,8 @@ video {
   max-width: 100%;
 }
 
-ul {
+ul,
+ol {
   list-style-position: inside;
 }
 
@@ -30,6 +31,7 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
 }
+
 
   :root {
   --bg-color: #fafafa;
@@ -60,9 +62,46 @@ main {
 }
 
 footer a {
+  position: relative;
   text-decoration: none;
   color: var(--text-color);
-  opacity: 0.8;
+  opacity: 0.7;
+  transition: opacity 250ms;
+}
+
+footer a:hover {
+  opacity: 1;
+  animation: color 1s ease-out alternate-reverse infinite;
+}
+
+footer a:before {
+  content: "@";
+  position: absolute;
+  left: -1.7ch;
+  opacity: 0;
+  transition: opacity ease-out 250ms 0ms;
+}
+
+footer a:hover::before {
+  opacity: 1;
+}
+
+@keyframes color {
+  0% {
+    color: #c71585;
+  }
+  25% {
+    color: #3cb371;
+  }
+  50% {
+    color: #7b68ee;
+  }
+  75% {
+    color: #d87093;
+  }
+  100% {
+    color: #9370d8
+  }
 }
 
 svg:focus {
@@ -225,10 +264,11 @@ nav.active ~ .nav-backdrop {
 }
 
 .recomended-posts ul li {
-  background-color: rgba(0, 0, 255, 0.1);
+  background-color: var(--bg-color);
   margin: 1em 0;
   padding: 1em;
   border-radius: 0.3em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 6px;
 }
 
 .recomended-posts ul li::before {
@@ -333,6 +373,10 @@ p {
   text-indent: var(--text-indent);
 }
 
+article p + p,
+article blockquote,
+article ul,
+article ol,
 article h1,
 article h2,
 article h3 {
@@ -354,15 +398,35 @@ article h3 {
 article code {
   font-family: monospace;
   background: #ddd;
-  padding: 0.4em;
+  padding: 0.25em;
   border-radius: 0.3em;
   font-weight: bold;
 }
 
 article img {
-  margin-top: 1em;
   margin-left: calc(var(--text-indent) * -1);
   cursor: pointer;
+}
+
+article blockquote {
+  font-style: italic;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 3px solid #333333;
+  outline-offset: -1px;
+  padding: 1em;
+  padding-left: 0.5em;
+}
+
+article blockquote p {
+  display: inline;
+}
+
+article blockquote::before,
+article blockquote::after {
+  content: '"';
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 

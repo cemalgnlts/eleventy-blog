@@ -9,7 +9,7 @@ cover: "/img/minimal-coffe-cup.jpg"
 
 Lorem, ipsum dolor *sit amet* consectetur **adipisicing elit**. Dicta omnis doloremque dolores perspiciatis odio aut unde `fugiat` quam debitis! Pariatur possimus facere modi inventore temporibus perferendis deserunt illo sed consectetur!
 
-![feature](/img/feature.png)
+![feature](/img/minimal-coffe-cup.jpg)
 
 ## Second Title
 
@@ -18,3 +18,13 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, facere commodi s
 ### Third Title
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus similique error laudantium rem mollitia, animi natus repellat illum, impedit, tenetur ad? Fugiat minima laudantium veniam hic dolore sit fuga incidunt, labore doloremque aliquam ipsa corporis rem inventore debitis ut, dicta reprehenderit aut neque totam natus expedita recusandae earum! Necessitatibus, facere!
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque architecto laboriosam commodi quisquam obcaecati soluta eos dignissimos cumque impedit ab.
+
+> Lorem, ipsum dolor. ~writer
+
+* Lorem,
+* ipsum
+
+1. dolor
+2. sit amet

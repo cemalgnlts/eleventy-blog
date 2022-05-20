@@ -20,7 +20,8 @@ video {
   max-width: 100%;
 }
 
-ul {
+ul,
+ol {
   list-style-position: inside;
 }
 

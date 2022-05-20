@@ -62,6 +62,7 @@ module.exports = function (eleventyConfig) {
 		markdownTemplateEngine: "njk",
 		dataTemplateEngine: "njk",
 		htmlTemplateEngine: "njk",
+		pathPrefix: process.env.mode === "dev" ? "/" : "/eleventy-blog/",
 		dir: {
 			input: "src",
 			output: "docs"

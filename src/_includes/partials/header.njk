@@ -1,6 +1,6 @@
 <header>
   <div class="container">
-    <h3><a href="/eleventy-blog/">Blog</a></h3>
+    <h3><a href="{{"/" | url}}">Blog</a></h3>
     
     <nav>
       <button class="menu-toggler" aria-expanded="false" aria-controls="menu" aria-label="toggle menu">
@@ -27,7 +27,7 @@
     </nav>
 
     <div class="profile">
-      <a href="about">
+      <a href="{{"/about" | url}}">
         <img src="https://avatars.githubusercontent.com/u/45357531?v=4" alt="about" />
       </a>
     </div>

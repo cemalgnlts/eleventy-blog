@@ -24,6 +24,10 @@ p {
   text-indent: var(--text-indent);
 }
 
+article p + p,
+article blockquote,
+article ul,
+article ol,
 article h1,
 article h2,
 article h3 {
@@ -45,13 +49,33 @@ article h3 {
 article code {
   font-family: monospace;
   background: #ddd;
-  padding: 0.4em;
+  padding: 0.25em;
   border-radius: 0.3em;
   font-weight: bold;
 }
 
 article img {
-  margin-top: 1em;
   margin-left: calc(var(--text-indent) * -1);
   cursor: pointer;
+}
+
+article blockquote {
+  font-style: italic;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 3px solid #333333;
+  outline-offset: -1px;
+  padding: 1em;
+  padding-left: 0.5em;
+}
+
+article blockquote p {
+  display: inline;
+}
+
+article blockquote::before,
+article blockquote::after {
+  content: '"';
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.3);
 }

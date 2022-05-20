@@ -2,7 +2,7 @@
 
 {% block main %}
   <div class="article-header">
-    <div class="article-header__cover" style="background-image: url(/eleventy-blog{{cover}})"></div>
+    <div class="article-header__cover" style="background-image: url({{cover | url}})"></div>
   </div>
   <div class="container">
     <article>

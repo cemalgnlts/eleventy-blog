@@ -1,5 +1,5 @@
 ---
-title: Expreince The Saharan Sands
+title: Experience The Saharan Sands
 category: Travel
 cover: /img/sands.jpeg
 ---
