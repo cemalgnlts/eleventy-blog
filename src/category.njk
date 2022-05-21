@@ -19,7 +19,7 @@ eleventyComputed:
 </div>
 
 <div class="pagination-footer">
-  <a href="{{category.prevUrl}}"{%if not category.hasPrev%} class="disabled"{%endif%}>Previous</a>
+  <a href="{{category.prevUrl | url}}"{%if not category.hasPrev%} class="disabled"{%endif%}>Previous</a>
   <span>{{category.pageNumber}}/{{category.pageSize}}</span>
-  <a href="{{category.nextUrl}}"{%if not category.hasNext%} class="disabled"{%endif%}>Next</a>
+  <a href="{{category.nextUrl | url}}"{%if not category.hasNext%} class="disabled"{%endif%}>Next</a>
 </div>
