@@ -1,16 +1,7 @@
 ---
 permalink: "/style/main.css"
-styles:
-  - reset
-  - base
-  - header
-  - home
-  - blog
-  - article
-  - utils
-  - responsive
 ---
 
-{% for style in styles %}
-  {% include "style/" + style + ".css" %}
+{% for style in collections.styles %}
+  {% include style %}
 {% endfor %}

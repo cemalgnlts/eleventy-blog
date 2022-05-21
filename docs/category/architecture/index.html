@@ -20,10 +20,10 @@
         <svg width="22" height="16" fill="black">
           <g class="menu-toggler__icon--menu">
             <rect width="22" height="2" ></rect>
-            <rect width="22" height="2" y="6"></rect>
-            <rect width="22" height="2" y="12"></rect>
+            <rect width="22" height="2" y="7"></rect>
+            <rect width="22" height="2" y="14"></rect>
           </g>
-          <g transform="rotate(90 8.5 7.5)" class="menu-toggler__icon--close">
+          <g transform="rotate(90 9 7.5)" class="menu-toggler__icon--close">
             <rect width="20" height="2" x="-3" y="5" transform="rotate(45 9 8)"></rect>
             <rect width="20" height="2" x="-3" y="4.8" transform="scale(-1 1) rotate(45 0 -14)"></rect>
           </g>
@@ -105,11 +105,11 @@
     <script>
       const nav = document.querySelector("nav");
 const menuToggler = document.querySelector(".menu-toggler");
+// const menu = document.querySelector("#menu");
 
 menuToggler.onclick = () => {
-    nav.classList.toggle("active");
-    menuToggler.setAttribute("aria-expanded",
-        menuToggler.getAttribute("aria-expanded") === "true" ? "false" : "true");
+    const isOpened = nav.classList.toggle("active");
+    menuToggler.setAttribute("aria-expanded", isOpened ? "true" : "false");
 };
       </script>
   </body>

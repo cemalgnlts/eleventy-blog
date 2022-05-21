@@ -109,6 +109,138 @@ svg:focus {
   outline-offset: 2px;
 }
 
+  .article-header {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.article-header__cover {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+article {
+  padding: 0 1em;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  text-align: justify;
+  font-size: 1.2rem;
+  --text-indent: 0.5em;
+}
+
+p {
+  text-indent: var(--text-indent);
+}
+
+article p + p,
+article blockquote,
+article ul,
+article ol,
+article h1,
+article h2,
+article h3 {
+  margin-top: 1em;
+}
+
+article h1 {
+  margin-bottom: 1em;
+}
+
+article h2 {
+  margin-bottom: 0.5em;
+}
+
+article h3 {
+  margin-bottom: 0.25em;
+}
+
+article code {
+  font-family: monospace;
+  background: #ddd;
+  padding: 0.25em;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+article img {
+  margin-left: calc(var(--text-indent) * -1);
+  cursor: pointer;
+}
+
+article blockquote {
+  font-style: italic;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 3px solid #333333;
+  outline-offset: -1px;
+  padding: 1em;
+  padding-left: 0.5em;
+}
+
+article blockquote p {
+  display: inline;
+}
+
+article blockquote::before,
+article blockquote::after {
+  content: '"';
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+  .category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin-top: 3em;
+  grid-gap: 1em;
+}
+
+.category-grid > a {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  height: 10em;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0.4em;
+  padding: 1em;
+  box-shadow: 0 0 3px #ccc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-position: center;
+  vertical-align: bottom;
+  min-height: 10em;
+  height: 100%;
+  transition: background-color 500ms linear;
+  display: flex;
+  align-items: flex-end;
+}
+
+.category-grid > a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pagination-footer {
+  margin: 1em 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: flex-end;
+  gap: 1em;
+}
+
+.pagination-footer a {
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: cadetblue;
+  border-radius: 0.4em;
+  padding: 0.6em 1em;
+}
+
   header {
   border-bottom: 1px solid #ddd;
 }
@@ -165,18 +297,28 @@ footer {
   height: 16px;
   cursor: pointer;
   border-radius: 0.5em;
+  position: relative;
+}
+
+.menu-toggler__icon--close,
+.menu-toggler__icon--menu {
+  transition: transform 250ms;
 }
 
 .menu-toggler__icon--close {
-  display: none;
+  transform: translate(-100%, 50%);
 }
 
 nav.active .menu-toggler__icon--close {
-  display: block;
+  transform: translate(10%, 20%);
+}
+
+.menu-toggler__icon--menu {
+  transform: translateX(0%) translateY(0%);
 }
 
 nav.active .menu-toggler__icon--menu {
-  display: none;
+  transform: translateX(100%) translateY(50%);
 }
 
 .profile {
@@ -298,152 +440,11 @@ nav.active ~ .nav-backdrop {
 }
 
 
-  .category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  margin-top: 3em;
-  grid-gap: 1em;
-}
-
-.category-grid > a {
-  text-decoration: none;
-  color: #fff;
-  width: 100%;
-  height: 10em;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 0.4em;
-  padding: 1em;
-  box-shadow: 0 0 3px #ccc;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply;
-  background-position: center;
-  vertical-align: bottom;
-  min-height: 10em;
-  height: 100%;
-  transition: background-color 500ms linear;
-  display: flex;
-  align-items: flex-end;
-}
-
-.category-grid > a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.pagination-footer {
-  margin: 1em 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  align-self: flex-end;
-  gap: 1em;
-}
-
-.pagination-footer a {
-  text-decoration: none;
-  color: var(--text-color);
-  background-color: cadetblue;
-  border-radius: 0.4em;
-  padding: 0.6em 1em;
-}
-
-  .article-header {
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2em;
-}
-
-.article-header__cover {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-article {
-  padding: 0 1em;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  text-align: justify;
-  font-size: 1.2rem;
-  --text-indent: 0.5em;
-}
-
-p {
-  text-indent: var(--text-indent);
-}
-
-article p + p,
-article blockquote,
-article ul,
-article ol,
-article h1,
-article h2,
-article h3 {
-  margin-top: 1em;
-}
-
-article h1 {
-  margin-bottom: 1em;
-}
-
-article h2 {
-  margin-bottom: 0.5em;
-}
-
-article h3 {
-  margin-bottom: 0.25em;
-}
-
-article code {
-  font-family: monospace;
-  background: #ddd;
-  padding: 0.25em;
-  border-radius: 0.3em;
-  font-weight: bold;
-}
-
-article img {
-  margin-left: calc(var(--text-indent) * -1);
-  cursor: pointer;
-}
-
-article blockquote {
-  font-style: italic;
-  outline: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: 3px solid #333333;
-  outline-offset: -1px;
-  padding: 1em;
-  padding-left: 0.5em;
-}
-
-article blockquote p {
-  display: inline;
-}
-
-article blockquote::before,
-article blockquote::after {
-  content: '"';
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.5rem;
-  color: rgba(0, 0, 0, 0.3);
-}
-
-
-  .fz-1 {
-  font-size: 2rem;
-  font-weight: 900;
-}
-
-.disabled {
-  opacity: 0.2;
-}
-
   @media screen and (max-width: 768px) {
   #menu {
     position: fixed;
     top: 9%;
-    left: 100%;
+    left: 0;
     width: 100%;
     height: calc(100% - 9%);
     background: var(--bg-color);
@@ -452,11 +453,12 @@ article blockquote::after {
     padding: 2em 1em 0;
     text-align: right;
     z-index: 3;
-    transition: left 500ms;
+    transform: translateX(-100%);
+    transition: transform 500ms;
   }
 
   nav.active #menu {
-    left: 0%;
+    transform: translateX(0);
   }
 
   #menu li {
@@ -503,3 +505,12 @@ article blockquote::after {
   }
 }
 
+
+  .fz-1 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.disabled {
+  opacity: 0.2;
+}

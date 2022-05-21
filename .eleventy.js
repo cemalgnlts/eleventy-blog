@@ -1,7 +1,8 @@
 const lodash = require("lodash");
 const slugify = require("slugify");
-let markdownIt = require("markdown-it");
+const markdownIt = require("markdown-it");
 
+const utils = require("./src/_data/utils");
 const config = require("./src/_data/config.json");
 
 module.exports = function (eleventyConfig) {
@@ -10,6 +11,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addNunjucksFilter("head", (arr, len) => arr.slice(0, len));
 	eleventyConfig.addNunjucksFilter("selectRandom", (arr, count) => lodash.sampleSize(arr, count));
 
+	eleventyConfig.addCollection("styles", utils.getAllCSS);
 	eleventyConfig.addCollection("categories", function (collectionApi) {
 		const categories = [];
 		const cats = {};

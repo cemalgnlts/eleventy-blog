@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
 	"scripts": {
-		"start": "mode=dev eleventy --serve",
-		"build": "mode=prod eleventy"
+		"start": "mode=dev eleventy --serve --quiet",
+		"build": "mode=prod eleventy --quiet"
 	},
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1"

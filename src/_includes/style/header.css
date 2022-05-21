@@ -54,18 +54,28 @@ footer {
   height: 16px;
   cursor: pointer;
   border-radius: 0.5em;
+  position: relative;
+}
+
+.menu-toggler__icon--close,
+.menu-toggler__icon--menu {
+  transition: transform 250ms;
 }
 
 .menu-toggler__icon--close {
-  display: none;
+  transform: translate(-100%, 50%);
 }
 
 nav.active .menu-toggler__icon--close {
-  display: block;
+  transform: translate(10%, 20%);
+}
+
+.menu-toggler__icon--menu {
+  transform: translateX(0%) translateY(0%);
 }
 
 nav.active .menu-toggler__icon--menu {
-  display: none;
+  transform: translateX(100%) translateY(50%);
 }
 
 .profile {
